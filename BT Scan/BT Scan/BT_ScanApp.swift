@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct BT_ScanApp: App {
+    @StateObject private var bluetooth = BLEManager()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(bluetooth)
         }
     }
 }
